@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diary</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}" />
+        <link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div>
+            <a href="/">Main page</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

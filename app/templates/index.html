@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if user %}
+    <p>
+        <a href="/logout"><button>Logout</button></a>
+    </p>
+    <h1>Hi, {{user.username}}</h1>
+    {% for post in user.posts %}
+    <div>
+        <p>{{post.author}}: <b>{{post.text}}</b></p>
+    </div>
+    {% else %}
+    <div>
+        <p>Check your <a href="/{{user.username}}/posts">posts</a></p>
+    </div>
+    {% endfor %}
+{% else %}
+<div>
+    <a href="/login/signin"><button>Sign In</button></a>
+</div>
+<div>
+    <a href="/login/signup"><button>Sign Up</button></a>
+</div>
+{% endif %}
+
+{% endblock %}

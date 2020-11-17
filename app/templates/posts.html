@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div>
+    <div class='posts'>
+        <h1>{{username}}'s posts</h1>
+        {% if not posts %}
+        <p class='message'>Oops, there are no posts yet.</p>
+        {% else %}
+        <ul>
+        {% for post in posts %}
+        <div class='post item'>
+            <li>
+            <p class='title'>{{post.creation_time}}</p>
+            <p class='title'>{{post.title}}</p>
+            <p class='text'>{{post.text}}</p>
+            </li>
+        </div>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+
+    {% if isCurrentUser %}
+    <div class="postForm">
+        <form action="" method="POST">
+            <p>
+                <label for='title'>Title</label>
+                <input type="text" name='title'/>
+            </p>
+
+            <p>
+                <label for='text'>Text</label>
+                <textarea name='text'></textarea>
+            </p>
+
+            <p>
+                <button>Add new post</button>
+            </p>
+        </form>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

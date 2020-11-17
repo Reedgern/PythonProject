@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if message %}
+<p class='error'>{{message}}</p>
+{% endif %}
+
+<div class='login'>
+        <form action="" method="post">
+            <p>
+                <label for="username">Username</label>
+                <input type="text" name="username"/>
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input type="password" name="password"/>
+            </p>
+            <p>
+                <button>{{login_type}}</button>
+            </p>
+        </form>
+</div>
+
+{% endblock %}

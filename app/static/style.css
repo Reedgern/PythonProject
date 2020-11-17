@@ -1,0 +1,128 @@
+.postForm textarea {
+    width: 90%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+.postForm form {
+    width: 30%;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-left: 300px;
+}
+
+.postForm input {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.login form {
+    width: 20%;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.error {
+    color: red;
+}
+
+.posts {
+    border: 15px solid saddlebrown;
+    width: 1000px;
+    margin-top: 150px;
+    margin-left: 50px;
+    background-image: url("https://st3.depositphotos.com/7636160/12829/i/950/depositphotos_128296288-stock-photo-seamless-cork-texture-perfect-background.jpg");
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.posts h1 {
+    text-align: center;
+}
+
+.post {
+    width: 950px;
+    padding: 20px;
+}
+
+.message {
+    background-position: -100px -10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: author, cursive;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.post {
+    color: black;
+    background-image: url("https://storage.googleapis.com/multi-static-content/previews/artage-io-thumb-64307f0ad8c95bf121387dbc9ee45d65.png");
+    background-size: 120%;
+    background-position: -100px -10px;
+    border-radius: 25px;
+    box-shadow: black 2px 2px 5px 0;
+    border: 2px solid black;
+    padding: 5px;
+    margin-bottom: 20px;
+/*     font-family: Monotype Corsiva, cursive; */
+    font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+/*     vertical-align: middle; */
+    position: relative;
+}
+
+.post li {
+    list-style-type: none;
+}
+
+
+.post .title {
+    text-align: center;
+}
+
+.posts {
+    color: white;
+}
+
+
+.post img {
+    position: absolute;
+    right: 0;
+    height: 50px;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+
+textarea, input {
+    margin-bottom: 10px;
+    padding: 2px 5px;
+    border: 1px solid gray;
+}
+
+textarea, input {
+    margin: 0 auto;
+    outline:none;
+}
+
+button {
+    border-radius: 5px;
+    background-color: #dad0af;
+    width: 180px;
+    height: 40px;
+    margin: 10px auto;
+    border: 1px solid gray;
+    outline:none;
+}
