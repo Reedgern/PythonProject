@@ -7,6 +7,7 @@ import json
 from datetime import datetime
 
 current_user_data = None
+users_arr = []
 db = redis.Redis(host='redis', port=6379, db=0)
 
 @app.route('/')
@@ -51,6 +52,17 @@ def login(login_type):
                 db.set(username, data)
                 current_user_data = user_data
                 current_user_data['username'] = username
+                                
+                db_users = db.get('users')
+                if db_users is None:
+                    db_users = []
+                else:
+                    db_users = json.loads(db_users)
+                db_users.append(username)
+                db.set('users', json.dumps(db_users))
+                global users_arr
+                users_arr = db_users
+                
                 return redirect('/')
     return render_template('login.html', message=message, login_type=button_login_type)
 
@@ -69,3 +81,9 @@ def posts(username):
         posts.insert(0, new_post)
         db.set(username+'_posts', json.dumps(posts))
     return render_template('posts.html', username=username, posts=posts, isCurrentUser=isCurrentUser)
+
+@app.route('/users')
+def users():
+    global users_arr
+    return render_template('users.html', users=users_arr)
+    

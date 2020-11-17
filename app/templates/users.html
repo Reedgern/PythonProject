@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if not users %}
+<p>Oops, there are no users yet. Hurry up and sign up new account.</p>
+{% else %}
+<ul>
+    {% for user in users %}
+    <li><a href="/{{user}}/posts">{{user}}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %}
